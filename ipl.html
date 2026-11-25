@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IPL 2026 Ticket Booking</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #071b45;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #071b45, #174ea6);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .hero button {
+            background-color: #ffcc00;
+            color: #071b45;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Common Sections */
+        section {
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #071b45;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        /* Match Cards */
+        .match-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .match-card {
+            background-color: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+
+        .match-card h3 {
+            color: #174ea6;
+            margin-bottom: 15px;
+        }
+
+        .match-card p {
+            margin: 12px 0;
+        }
+
+        .book-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #071b45;
+            color: white;
+            padding: 11px 22px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background-color: #174ea6;
+        }
+
+        /* Booking Form */
+        #booking {
+            background-color: #e8edf5;
+        }
+
+        .booking-form {
+            background-color: white;
+            max-width: 450px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .booking-form button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background-color: #071b45;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover {
+            background-color: #174ea6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #071b45;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <h1>IPL 2026</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#matches">Matches</a>
+            <a href="#booking">Book Tickets</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+
+        <h2>IPL 2026 Ticket Booking</h2>
+
+        <p>Experience the excitement of Indian Premier League Cricket!</p>
+
+        <button class="book-btn" onclick="showToast('Welcome to IPL Ticket Booking!')">
+            Book Tickets
+        </button>
+
+    </section>
+
+
+    <!-- Match Schedule -->
+    <section id="matches">
+
+        <h2>Upcoming Match Schedule</h2>
+
+        <div class="match-container">
+
+            <!-- Match 1 -->
+            <div class="match-card">
+
+                <h3>Match 1</h3>
+
+                <p><strong>RCB vs CSK</strong></p>
+
+                <p>Date: 28 March 2026</p>
+
+                <p>Time: 7:30 PM</p>
+
+                <p>Venue: Bengaluru</p>
+
+                <a href="#booking" class="book-btn">
+                    Book
+                </a>
+
+            </div>
+
+
+            <!-- Match 2 -->
+            <div class="match-card">
+
+                <h3>Match 2</h3>
+
+                <p><strong>MI vs KKR</strong></p>
+
+                <p>Date: 29 March 2026</p>
+
+                <p>Time: 7:30 PM</p>
+
+                <p>Venue: Mumbai</p>
+
+                <a href="#booking" class="book-btn">
+                    Book
+                </a>
+
+            </div>
+
+
+            <!-- Match 3 -->
+            <div class="match-card">
+
+                <h3>Match 3</h3>
+
+                <p><strong>SRH vs RR</strong></p>
+
+                <p>Date: 30 March 2026</p>
+
+                <p>Time: 7:30 PM</p>
+
+                <p>Venue: Hyderabad</p>
+
+                <a href="#booking" class="book-btn">
+                    Book
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Ticket Booking Form -->
+    <section id="booking">
+
+        <h2>Book Your IPL Tickets</h2>
+
+        <div class="booking-form">
+
+            <form id="ticketForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Your Email"
+                    required
+                >
+
+                <select id="match" required>
+
+                    <option value="">Select Match</option>
+
+                    <option value="RCB vs CSK">RCB vs CSK</option>
+
+                    <option value="MI vs KKR">MI vs KKR</option>
+
+                    <option value="SRH vs RR">SRH vs RR</option>
+
+                </select>
+
+                <select id="tickets" required>
+
+                    <option value="">Select Number of Tickets</option>
+
+                    <option value="1">1 Ticket</option>
+
+                    <option value="2">2 Tickets</option>
+
+                    <option value="3">3 Tickets</option>
+
+                    <option value="4">4 Tickets</option>
+
+                </select>
+
+                <button type="submit">
+                    Confirm Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 IPL Ticket Booking | All Rights Reserved</p>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
